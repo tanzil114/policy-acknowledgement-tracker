@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Policy Acknowledgement Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="logo.png" alt="logo">
+    <span class="name">Policy Acknowledgement Tracker</span>
+    <nav><a href="index.html">Docs</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: 2 September 2026</p>
+    <p>This Privacy Policy describes how Rethought ("we", "us") handles data in connection with the <strong>Policy Acknowledgement Tracker</strong> app for Confluence Cloud (the "App").</p>
+
+    <h2>The short version</h2>
+    <ul>
+      <li>The App is built entirely on Atlassian Forge and runs exclusively on Atlassian's infrastructure.</li>
+      <li><strong>We do not operate any servers, and no data is ever transmitted outside of Atlassian's platform.</strong> The App declares zero egress permissions.</li>
+      <li>We (the vendor) have no access to your data. All App data lives in Forge storage within your Atlassian installation.</li>
+      <li>The App never reads or stores the body content of your Confluence pages.</li>
+    </ul>
+
+    <h2>Data the App stores</h2>
+    <p>To provide its functionality, the App stores the following in Atlassian Forge storage, scoped to your installation:</p>
+    <table>
+      <tr><th>Data</th><th>Purpose</th></tr>
+      <tr><td>Page IDs, page titles, and page version numbers of tracked policy pages</td><td>Identifying tracked policies and pinning acknowledgements to versions</td></tr>
+      <tr><td>Confluence group IDs/names and Atlassian account IDs and display names of assignees</td><td>Determining who must acknowledge each policy</td></tr>
+      <tr><td>Acknowledgement records (account ID, timestamp, page version, campaign cycle)</td><td>Tracking status and producing audit evidence</td></tr>
+      <tr><td>Policy configuration (deadlines, cycles, settings)</td><td>Operating re-attestation campaigns</td></tr>
+    </table>
+    <p>The App does <strong>not</strong> store page body content, passwords, or any data from outside your Atlassian site.</p>
+
+    <h2>How data is processed</h2>
+    <ul>
+      <li>All processing happens inside Atlassian Forge functions on Atlassian infrastructure, subject to Atlassian's own security and compliance controls.</li>
+      <li>Interactive operations (page search, page reads) run with the requesting user's own permissions, so the App can never expose content a user could not already access.</li>
+      <li>A daily scheduled job refreshes group memberships and rolls re-attestation cycles. It processes only the data listed above.</li>
+    </ul>
+
+    <h2>Data sharing</h2>
+    <p>We do not sell, share, or transmit your data to anyone. We cannot: the App has no external endpoints, no analytics, no telemetry, and no egress permissions. Data handling is governed by your agreement with Atlassian and Atlassian's privacy policy for platform-hosted data.</p>
+
+    <h2>Data retention and deletion</h2>
+    <ul>
+      <li>Acknowledgement history is retained while the App is installed, to serve as audit evidence.</li>
+      <li>Removing a policy stops tracking but retains its history.</li>
+      <li>Uninstalling the App causes Atlassian to delete the App's stored data for your installation in accordance with Forge platform policy.</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <p>Because all data resides within your own Atlassian installation and under your organisation's control, data subject requests (access, deletion, correction) can be fulfilled by your own Confluence administrators using the App's export features, or by uninstalling the App. For assistance, contact us at <a href="mailto:tanzeel@rethought.to">tanzeel@rethought.to</a>.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy from time to time. Material changes will be reflected on this page with an updated date.</p>
+
+    <h2>Contact</h2>
+    <p>Rethought · Lahore, Pakistan · <a href="mailto:tanzeel@rethought.to">tanzeel@rethought.to</a></p>
+  </div>
+</main>
+<footer><div class="wrap"><p>© 2026 Rethought · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a></p></div></footer>
+</body>
+</html>

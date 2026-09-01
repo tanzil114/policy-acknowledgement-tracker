@@ -1,0 +1,35 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #172b4d; line-height: 1.65; background: #fff;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+header { border-bottom: 1px solid #ebecf0; padding: 18px 0; }
+header .wrap { display: flex; align-items: center; gap: 12px; }
+header img { width: 36px; height: 36px; border-radius: 8px; }
+header .name { font-weight: 700; font-size: 17px; }
+header nav { margin-left: auto; display: flex; gap: 20px; }
+header nav a { color: #42526e; text-decoration: none; font-size: 14px; font-weight: 500; }
+header nav a:hover { color: #0052cc; }
+main { padding: 48px 0 80px; }
+h1 { font-size: 34px; margin-bottom: 12px; letter-spacing: -0.02em; }
+h2 { font-size: 22px; margin: 40px 0 12px; }
+h3 { font-size: 17px; margin: 24px 0 8px; }
+p, li { color: #344563; font-size: 16px; }
+ul, ol { padding-left: 24px; margin: 10px 0; }
+li { margin: 6px 0; }
+.lead { font-size: 19px; color: #42526e; margin-bottom: 28px; }
+.badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 30px; }
+.badge { background: #e3fcef; color: #006644; border-radius: 4px; padding: 4px 12px; font-size: 13px; font-weight: 600; }
+.badge.blue { background: #deebff; color: #0747a6; }
+.cta { display: inline-block; background: #0052cc; color: #fff; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 8px 0 20px; }
+.cta:hover { background: #0747a6; }
+.card { border: 1px solid #ebecf0; border-radius: 10px; padding: 20px 24px; margin: 14px 0; }
+.card h3 { margin-top: 0; }
+footer { border-top: 1px solid #ebecf0; padding: 24px 0 48px; color: #6b778c; font-size: 14px; }
+footer a { color: #42526e; }
+code { background: #f4f5f7; border-radius: 3px; padding: 1px 6px; font-size: 14px; }
+.muted { color: #6b778c; font-size: 14px; }
+table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+th, td { text-align: left; border-bottom: 1px solid #ebecf0; padding: 8px 10px; font-size: 15px; }
+th { color: #6b778c; font-size: 13px; text-transform: uppercase; }

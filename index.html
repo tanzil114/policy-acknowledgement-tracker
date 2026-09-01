@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Policy Acknowledgement Tracker for Confluence — Documentation</title>
+  <meta name="description" content="Mandatory read confirmation, periodic re-attestation campaigns, and auditor-ready evidence for Confluence policies. ISO 27001, SOC 2 & QMS ready.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="logo.png" alt="Policy Acknowledgement Tracker logo">
+    <span class="name">Policy Acknowledgement Tracker</span>
+    <nav>
+      <a href="index.html">Docs</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <h1>Policy Acknowledgement Tracker for Confluence</h1>
+    <p class="lead">Turn Confluence pages into tracked policies. Employees confirm "read &amp; understood" on the page itself; every acknowledgement is pinned to the exact page version — with recurring re-attestation campaigns and one-click audit evidence for ISO 27001, SOC 2, and QMS reviews.</p>
+    <div class="badge-row">
+      <span class="badge">Runs on Atlassian — zero egress</span>
+      <span class="badge blue">Confluence Cloud</span>
+      <span class="badge blue">Free ≤ 10 users</span>
+    </div>
+
+    <h2 id="getting-started">Getting started</h2>
+    <ol>
+      <li>Install <strong>Policy Acknowledgement Tracker</strong> from the Atlassian Marketplace.</li>
+      <li>In Confluence, open <strong>Apps → Policy Acknowledgements</strong>.</li>
+      <li>Go to the <strong>Policies</strong> tab and click <strong>Track a policy page</strong>.</li>
+      <li>Search for the page, assign Confluence groups or individual users, set a deadline, and (optionally) a re-attestation cycle. Click <strong>Start tracking</strong>.</li>
+    </ol>
+    <p>Assignees now see an <em>"Acknowledgement required"</em> item in the page byline (under the page title) with a one-click <strong>"I have read and understood this page"</strong> button.</p>
+
+    <h2 id="features">Features</h2>
+    <div class="card">
+      <h3>📄 One-click acknowledgement on the page</h3>
+      <p>Readers confirm right in the page byline — no separate portal. Each confirmation records the user, an exact timestamp, and the precise page version, so nobody attests to a document they haven't seen.</p>
+    </div>
+    <div class="card">
+      <h3>🔁 Recurring re-attestation campaigns</h3>
+      <p>Set quarterly, semi-annual, or annual cycles per policy. When a new cycle starts, acknowledgements automatically re-open — the recurring policy-review control that ISO 27001 (A.5.1), SOC 2, and QMS auditors ask for. Each cycle is labelled (e.g. <code>Q3 2026</code>) in the dashboard and the evidence export.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Version-aware re-acknowledgement</h3>
+      <p>When someone publishes a new version of a tracked page, pending status resets automatically (you can turn this off per policy). Acknowledgements always state which version was confirmed.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Compliance dashboard</h3>
+      <p>Per-policy completion bars, per-user status matrix (acknowledged / pending / overdue), deadlines, and cycle labels — one place to see who still owes you a confirmation.</p>
+    </div>
+    <div class="card">
+      <h3>📥 Auditor-ready evidence export</h3>
+      <p>Export a CSV with user, page, version acknowledged, timestamp, deadline, and campaign cycle. The full acknowledgement history is immutable — removing a policy never deletes past evidence.</p>
+    </div>
+    <div class="card">
+      <h3>🙋 "My acknowledgements" inbox</h3>
+      <p>Every user gets a personal view of pending and completed acknowledgements in Apps → Policy Acknowledgements.</p>
+    </div>
+
+    <h2 id="how-it-works">How assignment works</h2>
+    <ul>
+      <li>Assign a policy to <strong>Confluence groups</strong> (membership is re-synced daily) and/or <strong>individual users</strong>.</li>
+      <li>The <strong>deadline</strong> is measured in days from when tracking starts (or from each cycle start for recurring campaigns). After that, outstanding users show as <strong>Overdue</strong>.</li>
+      <li>Only Confluence admins see the Dashboard, Policies, and Audit export tabs. Regular users see their own acknowledgements only.</li>
+    </ul>
+
+    <h2 id="security">Security &amp; data residency</h2>
+    <ul>
+      <li>Built 100% on Atlassian Forge. All data is stored in Forge storage <strong>inside Atlassian's infrastructure</strong> — nothing ever leaves Atlassian. No external servers, no third-party subprocessors, no egress.</li>
+      <li>The app never reads your page content. It stores only page IDs, titles, version numbers, assignee account IDs, and acknowledgement timestamps.</li>
+      <li>Page reads and searches happen with the <em>requesting user's</em> permissions — the app cannot show anyone a page they couldn't already see, and it works even under strict app-access data security policies.</li>
+    </ul>
+
+    <h2 id="faq">FAQ</h2>
+    <h3>Does it send email reminders?</h3>
+    <p>Not in v1 — by design. Sending email would require data egress and would forfeit the Runs on Atlassian guarantee. Assignees see pending items in the page byline and their My Acknowledgements inbox. Opt-in notifications are on the roadmap.</p>
+    <h3>What happens when I edit a tracked page?</h3>
+    <p>If "require re-acknowledgement on new versions" is on, publishing a new version re-opens acknowledgements for everyone. The dashboard shows which version each person confirmed.</p>
+    <h3>What counts toward billing?</h3>
+    <p>Standard Atlassian Marketplace per-user pricing based on your Confluence user tier. Free for sites up to 10 users.</p>
+    <h3>Can I delete acknowledgement history?</h3>
+    <p>Removing a policy stops tracking but keeps history for audit evidence. Uninstalling the app permanently deletes all app data stored by Atlassian for the installation.</p>
+
+    <h2 id="roadmap">Roadmap</h2>
+    <ul>
+      <li>Opt-in reminder notifications (email / Slack)</li>
+      <li>PDF evidence packs</li>
+      <li>Label-based auto-tracking for whole spaces</li>
+      <li>Jira / JSM integration</li>
+    </ul>
+    <p class="muted">Have a request? <a href="support.html">Tell us</a> — the roadmap is customer-driven.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>© 2026 Rethought · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a></p>
+  </div>
+</footer>
+</body>
+</html>
