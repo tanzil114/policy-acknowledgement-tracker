@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security — Policy Acknowledgement Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="logo.png" alt="logo">
+    <span class="name">Policy Acknowledgement Tracker</span>
+    <nav><a href="index.html">Docs</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <h1>Security</h1>
+    <p class="muted">Last updated: 3 September 2026</p>
+    <p>This page describes how <strong>Policy Acknowledgement Tracker</strong> (the "App"), published by Rethought, is built and secured. It is separate from our <a href="privacy.html">Privacy Policy</a>, which explains what data the App stores.</p>
+
+    <h2>Runs entirely on Atlassian</h2>
+    <ul>
+      <li>The App is built entirely on <strong>Atlassian Forge</strong> and runs exclusively on Atlassian-operated infrastructure. It is eligible for the <strong>Runs on Atlassian</strong> program.</li>
+      <li>We operate <strong>no servers of our own</strong> and the App declares <strong>zero egress</strong> — it sends no data to any external host. You can verify this in the app manifest, which contains no <code>external</code> permissions block.</li>
+      <li>All App data is stored in <strong>Forge storage</strong> within your Atlassian installation, encrypted at rest by Atlassian, and is never transmitted to the vendor.</li>
+    </ul>
+
+    <h2>Least privilege &amp; access control</h2>
+    <ul>
+      <li>The App requests <strong>read-only</strong> Confluence scopes only (pages, users, and groups). It never requests write access to your content.</li>
+      <li>Interactive reads that surface information to a user run <strong>as that user</strong> (Forge <code>asUser</code>), so the App can never disclose a page, title, or link the requesting user could not already access. Permission checks <strong>fail closed</strong>: on any error, access is denied rather than granted.</li>
+      <li>Administrative functions (tracking a page, viewing the compliance dashboard, exporting evidence) are gated behind a Confluence site-admin check.</li>
+      <li>The App never reads or stores the body content of your Confluence pages, and never logs credentials, tokens, or API response bodies.</li>
+    </ul>
+
+    <h2>Secure development</h2>
+    <ul>
+      <li>Source control is protected with multi-factor authentication, and changes reach production through pull requests.</li>
+      <li>Dependencies are scanned for known vulnerabilities (<code>npm audit</code>, software composition analysis) before each release.</li>
+      <li>Security-sensitive logic — including the permission checks above — is covered by automated regression tests.</li>
+      <li>We maintain a written information-security policy and an incident-response plan.</li>
+    </ul>
+
+    <h2>Reporting a vulnerability</h2>
+    <p>If you believe you have found a security vulnerability in the App, please report it to us privately at <a href="mailto:security@rethought.to">security@rethought.to</a>. We will acknowledge your report, investigate promptly, and keep you informed of remediation. Please give us a reasonable opportunity to address the issue before any public disclosure. We will not pursue or support legal action against researchers acting in good faith under this policy.</p>
+
+    <h2>Data handling &amp; your rights</h2>
+    <p>For details of exactly what the App stores, how it is processed, retention, and deletion on uninstall, see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Security: <a href="mailto:security@rethought.to">security@rethought.to</a> · General: <a href="mailto:tanzeel@rethought.to">tanzeel@rethought.to</a><br>Rethought · Lahore, Pakistan</p>
+  </div>
+</main>
+<footer><div class="wrap"><p>© 2026 Rethought · <a href="security.html">Security</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a></p></div></footer>
+</body>
+</html>
